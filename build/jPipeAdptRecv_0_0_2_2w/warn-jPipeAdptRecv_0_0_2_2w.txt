@@ -1,0 +1,86 @@
+
+This file lists modules PyInstaller was not able to find. This does not
+necessarily mean this module is required for running you program. Python and
+Python 3rd-party packages include a lot of conditional or optional module. For
+example the module 'ntpath' only exists on Windows, whereas the module
+'posixpath' only exists on Posix systems.
+
+Types if import:
+* top-level: imported at the top-level - look at these first
+* conditional: imported within an if-statement
+* delayed: imported from within a function
+* optional: imported within a try-except-statement
+
+IMPORTANT: Do NOT post this list to the issue-tracker. Use it as a basis for
+           yourself tracking down the missing module. Thanks!
+
+missing module named pyimod03_importers - imported by /usr/local/lib/python2.7/dist-packages/PyInstaller/loader/rthooks/pyi_rth_pkgres.py (top-level)
+missing module named org - imported by copy (optional)
+missing module named _sysconfigdata_d - imported by _sysconfigdata (conditional)
+missing module named 'packaging.specifiers' - imported by pkg_resources (optional)
+missing module named packaging - imported by pkg_resources (optional)
+missing module named 'importlib.machinery' - imported by pkg_resources (conditional)
+missing module named 'urllib.parse' - imported by web.py3helpers (conditional), web.webapi (optional), web.net (optional), web.http (optional), web.db (optional), web.httpserver (optional), pkg_resources (conditional), web.browser (optional), web.application (optional)
+missing module named _imp - imported by pkg_resources (optional)
+missing module named _winreg - imported by platform (delayed, optional), dns.resolver (conditional), mimetypes (optional), urllib (delayed, conditional, optional)
+missing module named _scproxy - imported by urllib (conditional)
+missing module named EasyDialogs - imported by getpass (optional)
+missing module named msvcrt - imported by subprocess (conditional), getpass (delayed, optional)
+missing module named SOCKS - imported by ftplib (optional)
+missing module named rourl2path - imported by urllib (conditional)
+missing module named 'org.python' - imported by pickle (optional), xml.sax (delayed, conditional)
+missing module named 'java.lang' - imported by platform (delayed, optional), xml.sax._exceptions (conditional)
+missing module named _xmlplus - imported by xml (optional)
+missing module named 'Carbon.File' - imported by plistlib (delayed)
+missing module named 'Carbon.Files' - imported by plistlib (delayed)
+missing module named Carbon - imported by plistlib (delayed)
+missing module named vms_lib - imported by platform (delayed, conditional, optional)
+missing module named _subprocess - imported by subprocess (conditional)
+missing module named java - imported by platform (delayed)
+missing module named MacOS - imported by platform (delayed, optional)
+missing module named macresource - imported by MacOS (top-level)
+missing module named gestalt - imported by platform (delayed, optional)
+missing module named win32con - imported by platform (delayed, optional)
+missing module named win32api - imported by platform (delayed, optional)
+missing module named win32pipe - imported by platform (delayed, conditional, optional)
+missing module named 'openid.store' - imported by web.webopenid (top-level)
+missing module named openid - imported by web.webopenid (top-level)
+missing module named 'google.appengine' - imported by web.application (delayed, conditional, optional)
+missing module named importlib.reload - imported by importlib (optional), web.application (optional)
+missing module named google - imported by web.template (optional)
+missing module named builtins - imported by web.template (conditional)
+missing module named ClientForm - imported by web.browser (delayed, conditional)
+missing module named BeautifulSoup - imported by web.browser (delayed)
+missing module named _dummy_threading - imported by dummy_threading (top-level)
+missing module named 'urllib.response' - imported by web.browser (optional)
+missing module named 'web.http.cookiejar' - imported by web.browser (optional)
+missing module named 'urllib.request' - imported by web.browser (optional)
+missing module named 'web.http.client' - imported by web.browser (optional)
+missing module named 'flup.server' - imported by web.wsgi (delayed)
+missing module named flup - imported by web.wsgi (delayed)
+missing module named OpenSSL - imported by web.wsgiserver.ssl_pyopenssl (optional)
+missing module named cherrypy - imported by web.wsgiserver.ssl_pyopenssl (top-level)
+missing module named 'web.http.server' - imported by web.httpserver (conditional)
+missing module named queue - imported by web.wsgiserver.wsgiserver2 (optional)
+missing module named cx_Oracle - imported by web.db (delayed)
+missing module named pymssql - imported by web.db (delayed)
+missing module named kinterbasdb - imported by web.db (delayed, optional)
+missing module named psycopg2 - imported by web.db (delayed, conditional)
+missing module named boto - imported by web.utils (delayed, conditional)
+missing module named markdown - imported by web.utils (delayed)
+missing module named 'web.http.cookies' - imported by web.webapi (optional)
+missing module named riscosenviron - imported by os (conditional, optional)
+missing module named riscospath - imported by os (conditional)
+missing module named riscos - imported by os (conditional, optional)
+missing module named ce - imported by os (conditional, optional)
+missing module named _emx_link - imported by os (conditional)
+missing module named os2 - imported by os (conditional, optional)
+missing module named nt - imported by os (conditional, optional), ntpath (optional)
+missing module named 'ctypes.macholib' - imported by ctypes.util (conditional)
+missing module named netbios - imported by uuid (delayed)
+missing module named win32wnet - imported by uuid (delayed)
+missing module named winrandom - imported by Crypto.Random.OSRNG.nt (top-level)
+missing module named 'ecdsa.keys' - imported by dns.dnssec (optional)
+missing module named 'ecdsa.ellipticcurve' - imported by dns.dnssec (optional)
+missing module named 'ecdsa.ecdsa' - imported by dns.dnssec (optional)
+missing module named ecdsa - imported by dns.dnssec (optional)

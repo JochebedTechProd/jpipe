@@ -1,0 +1,1 @@
+{"AdapterId":"1","AdapterName":"New Adapter","AdapterDesc":"Enter Adapter Desc","SendFrequency":"0:01:00","ReceiveFrequency":"0:01:10","DataFormat":"json","Settings":{"forwardType":"db","dbServer":"localhost","dbName":"jPipeAdptDb","dbPassword":"jpipe","dbUserId":"jpipe"}}

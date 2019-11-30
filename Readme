@@ -1,0 +1,24 @@
+----> Make sure to python3 and mysql install in your system 
+
+1). Create virtual environment to run Adater applictaion by using this command
+     
+     pip3 install virtualenv
+
+     virtualenv -p python3.6 AdapterEnv  
+
+  #### specify your python3 version , incase of mine is python3.6
+  
+
+ 
+2). Activate Environment 
+    
+    source AdapterEnv/bin/activate
+
+3). install dependency libraries
+  
+    pip install -r requirements.txt
+
+4). run the application
+
+    python jPipeAdptRecv_0_0_2_3.py
+

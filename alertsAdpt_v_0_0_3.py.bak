@@ -1,0 +1,139 @@
+import time
+from datetime import datetime
+import os
+import json
+import MySQLdb
+import requests
+sendAlert = False
+def commLayer():
+	data = '{"error_code":"200","Response":"Success", "get_alerts":[{ "AlertId": "1", "Alert_Name": "No Data", "Alert_Frequency": "00:00:10", "Alert_ExecuteOn": "Adapter", "Alert_Conditions": [{ "Pins": "RecvTime", "operation": "immediatePast", "PinsType": "occurTime", "operator1": ">", "value1": "0", "operator2": "<", "value2": "100000" }, { "Pins": "33", "operation": "value", "PinsType": "analogVal", "operator1": ">", "value1": "8","operator2": "<", "value2": "16" }], "Alert_Issued": { "sms": ["9705474827", "9704229333"], "email": ["mahesh.d@jochebedtech.com", "amos.eda@jochebedtech.com"], "mqtt": { "server": "jtsha.in", "port": "1883 ", "topic ": " / jpipe / alerts / voltage " } } }] }'
+	return data
+
+def jsondata_process(data):
+
+	alert_conditions = data['get_alerts'][0]['Alert_Conditions']
+
+	if len(alert_conditions) != 2:
+		print "Error Code 301. Quitting"
+		return 0
+
+	if alert_conditions[0]['PinsType'] != "occurTime" or alert_conditions[1]['operation'] != "value":
+		print "Error code 302. Quitting"
+		return 0
+
+	os.system('echo \"' + str(data) + '\" >> alertAdpt.json')
+
+	alert_frequency = data['get_alerts'][0]['Alert_Frequency']
+
+db = MySQLdb.connect("localhost", "jtsac", "ptljtsac", "jPipeAdptDb")
+
+cursor = db.cursor()
+data = commLayer()
+data = json.loads(data)
+jsondata_process(data)
+elapsed_time=time.strftime("%H:%M:%S")
+alert_frequency = data['get_alerts'][0]['Alert_Frequency']
+
+while(1):
+	t1 = time.strftime("%H:%M:%S")
+	tdelta = datetime.strptime(t1, "%H:%M:%S") - datetime.strptime(elapsed_time, "%H:%M:%S") 
+	# print tdelta
+	if ( tdelta >= (datetime.strptime(alert_frequency, "%H:%M:%S") - datetime.strptime("00:00:00", "%H:%M:%S"))):
+		data = commLayer()
+		data = json.loads(data)
+		if jsondata_process(data) == 0:
+			elapsed_time=time.strftime("%H:%M:%S")
+			continue
+		alert_frequency = data['get_alerts'][0]['Alert_Frequency']
+		condition2_1 = None
+		value2_1 = None
+		condition2_2 = None
+		value2_2 = None
+		operator1 = data['get_alerts'][0]['Alert_Conditions'][0]['operator1']
+		value1 = int(data['get_alerts'][0]['Alert_Conditions'][0]['value1'])	
+		operator2 = data['get_alerts'][0]['Alert_Conditions'][0]['operator2']
+		value2 = int(data['get_alerts'][0]['Alert_Conditions'][0]['value2']	)	
+
+		if 'operator1' in data['get_alerts'][0]['Alert_Conditions'][1]:
+			condition2_1 = data['get_alerts'][0]['Alert_Conditions'][1]['operator1']
+			value2_1 = int(data['get_alerts'][0]['Alert_Conditions'][1]['value1'])
+		else:
+			condition2_1 = None
+			value2_1 = -1
+
+		if 'operator2' in data['get_alerts'][0]['Alert_Conditions'][1]:
+			operator2_2 = data['get_alerts'][0]['Alert_Conditions'][1]['operator2']
+			value2_2 = int(data['get_alerts'][0]['Alert_Conditions'][1]['value2'])
+		else:
+			operator2_2 = None
+			value2_2 = -1
+
+		curr_time = time.time()
+
+		t1 = curr_time - (value1*60)
+		t2 = curr_time - (value2*60)
+
+		t1 = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(t1))
+		t2 = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(t2))
+
+		sqlq = "select data from inData WHERE inserrtDt BETWEEN \"" + t2 + "\" AND \"" +  t1 + "\""
+
+		print sqlq
+
+		cursor.execute(sqlq)
+
+		db.commit();
+
+		results = cursor.fetchall()
+
+		# print results
+		a=[]
+		sum1=0
+		for list_result in results:
+			# print(list_result[0])
+			# print(list_result[0][0])
+			# val = list_result['data']['data']
+			h=json.loads(list_result[0])
+			val = h['data']
+			eval_str = ""
+			if condition2_1 != None:
+				eval_str = val + condition2_1 + str(value2_1)
+			else:
+				eval_str = "1"
+			if condition2_2 != None:
+				eval_str = eval_str + ' and ' + val + condition2_2 + str(value2_2)
+			if eval(eval_str):
+				print eval_str
+				sendAlert = True
+
+
+			# 	print list_result
+			finalValToAppend = -1
+			#debugStr1 = "condition2_1 : "+condition2_1
+			#print debugStr1
+			#debugStr1 = "int(h[data] : "+h['data']
+			#print debugStr1
+			#debugStr1 = "value2_1 : " + str(value2_1)
+			#print debugStr1
+
+			#if(condition2_1=="<" ) : 
+			#	if(int(h['data'])<value2_1):
+			#		sendAlert =True
+					# sum1 = sum1 + int(h['data'])
+
+			a.append(int(h['data']))
+		count1= len(a)
+		avg=0
+		if(count1>0):
+   			avg= sum1/count1
+	   	print avg
+	   	print count1
+	   	if(sendAlert):
+	   		 print "Sending Alert"
+	   		 url='https://api.textlocal.in/send/?apikey=irlz29yH7zo-7Yxe1P8dAA7ylIwBatMOwf9xJbukjg&numbers='+'9704229333'+'&sender=JTSIOT&message=Alert:%20%20More%20Than%20Threshold'
+	   		 # serialized_data = urllib2.urlopen(url).read()
+	   		 serialized_data = requests.get(url)
+	   		 sendAlert=False
+          	 # data = json.loads(serialized_data)
+          	 # print data
+		elapsed_time=time.strftime("%H:%M:%S")

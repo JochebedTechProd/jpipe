@@ -1,0 +1,368 @@
+nohup: ignoring input
+ERR: create table inData(                dataId integer NOT NULL AUTO_INCREMENT,                transId integer,                 macId varchar(12),                pins varchar(32),                data varchar(256),                status char(3) default 'rec',                ackSent boolean default False,                 inserrtDt timestamp default current_timestamp,                 changeDt timestamp default current_timestamp,                insertUser char(30) default 'application',                 updateUser char(30) default 'application',                PRIMARY KEY (dataId),                CONSTRAINT UC_Person UNIQUE (transId))
+ERR: create table outData(                dataId integer NOT NULL AUTO_INCREMENT,                transId integer,                 macId varchar(12),                pins varchar(32),                data varchar(256),                status char(3) default 'rec',                ackSent boolean default False,                 inserrtDt timestamp default current_timestamp,                 changeDt timestamp default current_timestamp,                insertUser char(30) default 'application',                 updateUser char(30) default 'application',                PRIMARY KEY (dataId),                CONSTRAINT UC_Person UNIQUE (transId))
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284751', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284752', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284753', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284754', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284755', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284756', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284757', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284758', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284759', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284760', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284761', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284762', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284763', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284764', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284765', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284766', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284767', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284768', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284769', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284770', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284771', 'jpipe')
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284772', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284773', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284774', 'jpipe')
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284775', 'jpipe')
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284776', 'jpipe')
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284777', 'jpipe')
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284778', 'jpipe')
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284779', 'jpipe')
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284780', 'jpipe')
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284781', 'jpipe')
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284782', 'jpipe')
+The MAC address in formatted way is : 
+001851509b07
+jts/jpipe/v000001/adapter/1
+file config/configFile.txt opened
+config params already present. using them.
+ERROR:last_update_error-DatabaseError(1050):Table 'inData' already exists
+ERROR:last_update_error-DatabaseError(1050):Table 'outData' already exists
+connected with result code0
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284771' for key 'UC_Person'
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284774' for key 'UC_Person'
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284775' for key 'UC_Person'
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284776' for key 'UC_Person'
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284777' for key 'UC_Person'
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284778' for key 'UC_Person'
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284779' for key 'UC_Person'
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284780' for key 'UC_Person'
+config data received
+config data received
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284781' for key 'UC_Person'
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284782' for key 'UC_Person'
+{u'dataReERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284783', 'jpipe')
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284784', 'jpipe')
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284785', 'jpipe')
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284786', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284787', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284788', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284789', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284790', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284791', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284792', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284793', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284794', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284795', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284796', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284797', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284798', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284799', 'jpipe')
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284800', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284801', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284802', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284803', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284804', 'jpipe')
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284805', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284806', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284807', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284808', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284809', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284810', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284811', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284812', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284813', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284814', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284815', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284816', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284817', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284818', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284819', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284820', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284821', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284822', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284823', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+v': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284783' for key 'UC_Person'
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284784' for key 'UC_Person'
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284785' for key 'UC_Person'
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284799' for key 'UC_Person'
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284804' for key 'UC_Person'
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'DR', u0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284824', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284825', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284826', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284827', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284828', 'jpipe')
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284829', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284830', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+0.0 (1): INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "AR", "pins": "[33]", "data": "0"}', 'jpipe', '"[33]"', '284831', 'jpipe')
+0.0 (2): SELECT last_insert_id();
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284832', 'jpipe')
+ERR: INSERT INTO inData (data, insertUser, pins, transId, updateUser) VALUES ('{"dataRev": "DR", "pins": "[5]", "data": "1"}', 'jpipe', '"[5]"', '284833', 'jpipe')
+'pins': u'[5]', u'data': u'1'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284828' for key 'UC_Person'
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+config data received
+config data received
+{u'dataRev': u'AR', u'pins': u'[33]', u'data': u'0'}
+Pubishing data to =jts/jpipe/v000001/adapter/adapter_config=
+config data received
+config data received
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284832' for key 'UC_Person'
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+ERROR:last_update_error-DatabaseError(1062):Duplicate entry '284833' for key 'UC_Person'
+config data received
+config data changed. writing data to config file
+{u'dataRev': u'DR', u'pins': u'[5]', u'data': u'1'}
+./inV2/inData_284834.5243701
+Traceback (most recent call last):
+  File "jPipeAdptRecv_0_0_2_2w.py", line 281, in <module>
+    client.loop_forever()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 1470, in loop_forever
+    rc = self.loop(timeout, max_packets)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 995, in loop
+    rc = self.loop_read(max_packets)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 1273, in loop_read
+    rc = self._packet_read()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 1838, in _packet_read
+    rc = self._packet_handle()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 2285, in _packet_handle
+    return self._handle_publish()
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 2456, in _handle_publish
+    self._handle_on_message(message)
+  File "/usr/local/lib/python2.7/dist-packages/paho/mqtt/client.py", line 2603, in _handle_on_message
+    self.on_message(self, self._userdata, message)
+  File "jPipeAdptRecv_0_0_2_2w.py", line 242, in on_message
+    processData(var_allData,var_transId)
+  File "jPipeAdptRecv_0_0_2_2w.py", line 162, in processData
+    file1 = open(var_inDir,"w+")
+IOError: [Errno 21] Is a directory: './inV2'
